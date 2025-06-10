@@ -1,50 +1,76 @@
-# Welcome to your Expo app 👋
+# Movie App - React Native Mobile Application
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 📱 Overview
+Aplikasi pencarian film yang dibangun menggunakan React Native dengan integrasi TMDB API. Aplikasi ini memungkinkan pengguna untuk mencari dan melihat informasi film secara real-time.
 
-## Get started
+## 🚀 Fitur Utama
+- Real-time movie search
+- Debounced search untuk optimasi performa
+- Tampilan grid responsif untuk daftar film
+- Loading states & error handling
+- Interface yang clean dan modern
 
-1. Install dependencies
+## 🛠️ Tech Stack
+- React Native
+- TypeScript
+- TailwindCSS (via NativeWind)
+- TMDB API
+- React Navigation
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+## 📦 Dependencies
+```json
+{
+  "react-native": "latest",
+  "typescript": "^5.0.0",
+  "nativewind": "^2.0.0",
+  "@react-navigation/native": "^6.0.0"
+}
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🔧 Installation
 
-## Learn more
+```bash
+# Clone repository
+git clone https://github.com/username/movie-app.git
 
-To learn more about developing your project with Expo, look at the following resources:
+# Install dependencies
+cd movie-app
+npm install
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+# Run the app
+npm run android   # for Android
+npm run ios       # for iOS
+```
 
-## Join the community
+## 💡 Usage
+1. Buka aplikasi
+2. Ketik judul film yang ingin dicari
+3. Hasil pencarian akan muncul secara otomatis
+4. Scroll untuk melihat lebih banyak hasil
 
-Join our community of developers creating universal apps.
+## 📁 Struktur Proyek
+```
+app/
+├── (tabs)/          # Tab navigator screens
+├── components/      # Reusable components
+├── movies/         # Movie detail pages
+└── globals.css     # Global styles
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+assets/
+├── fonts/          # Custom fonts
+├── icons/          # App icons
+└── images/         # App images
+
+services/
+├── api.ts          # API service
+└── useFetch.ts     # Custom fetch hook
+```
+
+## 📄 License
+MIT License
+
+## 👥 Contributors
+- [Bintang Fauzan](https://github.com/username)
+
+---
+*Note: Aplikasi ini masih dalam tahap pengembangan aktif*
