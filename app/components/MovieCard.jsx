@@ -1,8 +1,10 @@
+import { Link } from 'expo-router'
 import { Image, Text, TouchableOpacity, View } from 'react-native'
 
-export default function MovieCard({ title = '', posterUrl = '', onPress }) {
+export default function MovieCard({ title, posterUrl, onPress, id }) {
   return (
-    <TouchableOpacity
+    <Link href={`/movies/${id}`} asChild>
+      <TouchableOpacity
       onPress={onPress}
       className="flex-1 m-1 rounded-xl overflow-hidden bg-[#232136] shadow-md min-w-[100px] max-w-[120px] items-center"
       activeOpacity={0.8}
@@ -25,5 +27,6 @@ export default function MovieCard({ title = '', posterUrl = '', onPress }) {
         {title}
       </Text>
     </TouchableOpacity>
+    </Link>
   )
 }

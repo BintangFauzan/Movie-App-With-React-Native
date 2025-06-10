@@ -9,12 +9,11 @@ import MovieCard from '../components/MovieCard'
 import SearchBar from '../components/SearchBar'
 
 const index = () => {
-  const [id, setId] = useState(0)
+  const [id, setId] = useState(null)
   const router = useRouter()
   function handleChangeId(id){
     setId(id)
   }
-  console.log('id', id)
   const {data: movies, loading: moviesLoading, error: moviesError} =  useFetch(() => fetchMovies({query : ''}))
   return (
     <View className='flex-1  bg-gray-950'>
@@ -35,7 +34,7 @@ const index = () => {
           />
           <Text className='text-lg text-white font-bold mt-5 mb-3'>Latest Movies</Text>
           <FlatList data={movies} renderItem={({item}) => (
-            <MovieCard title={item.title} onPress={() => handleChangeId(item.id)} posterUrl={`https://image.tmdb.org/t/p/w500${item.poster_path}`}/>
+            <MovieCard title={item.title} onPress={() => handleChangeId(item.id)} posterUrl={`https://image.tmdb.org/t/p/w500${item.poster_path}`} id={id}/>
           )} keyExtractor={(item) => item.id.toString()} numColumns={3} columnWrapperStyle={{
             justifyContent: 'flex-start',
             gap:20,

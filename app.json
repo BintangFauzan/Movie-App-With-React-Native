@@ -16,6 +16,9 @@
         "foregroundImage": "./assets/images/logo.png",
         "backgroundColor": "#ffffff"
       },
+      "navigationBar": {
+        "visible": "immersive"
+      },
       "edgeToEdgeEnabled": true
     },
     "web": {
